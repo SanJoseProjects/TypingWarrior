@@ -47,7 +47,7 @@
       <x>60</x>
       <y>30</y>
       <width>386</width>
-      <height>39</height>
+      <height>61</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -83,6 +83,15 @@
          <width>260</width>
          <height>16777215</height>
         </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size: 18px;
+border-radius: 10px;</string>
        </property>
       </widget>
      </item>
@@ -122,7 +131,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="resourse.qrc">:/res/img/backside.jpg</pixmap>
+     <pixmap resource="../resourse.qrc">:/res/img/backside.jpg</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -162,6 +171,10 @@
          <height>30</height>
         </size>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:#F0CA08;
+border-radius:10;</string>
+       </property>
        <property name="text">
         <string>Начать</string>
        </property>
@@ -186,6 +199,11 @@
        </property>
        <property name="tabletTracking">
         <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:#F0CA08;
+border-radius:10;
+</string>
        </property>
        <property name="text">
         <string>Выход</string>
@@ -227,7 +245,7 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="resourse.qrc"/>
+  <include location="../resourse.qrc"/>
  </resources>
  <connections/>
 </ui>

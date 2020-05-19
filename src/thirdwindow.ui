@@ -14,6 +14,9 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <widget class="QLabel" name="backside">
     <property name="geometry">
      <rect>
@@ -42,7 +45,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="resourse.qrc">:/res/img/backside.jpg</pixmap>
+     <pixmap resource="../resourse.qrc">:/res/img/backside.jpg</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -52,20 +55,28 @@
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>300</y>
+      <y>360</y>
       <width>631</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius:10;</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>470</x>
+      <x>480</x>
       <y>410</y>
-      <width>211</width>
+      <width>201</width>
       <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:#F0CA08;
+QPushButton::hover {background: black};
+border-radius:10;</string>
     </property>
     <property name="text">
      <string>Проверить</string>
@@ -76,9 +87,13 @@
      <rect>
       <x>50</x>
       <y>410</y>
-      <width>211</width>
+      <width>201</width>
       <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:#F0CA08;
+border-radius:10;</string>
     </property>
     <property name="text">
      <string>Начать </string>
@@ -93,6 +108,10 @@
       <height>31</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:#F0CA08;
+border-radius:10;</string>
+    </property>
     <property name="text">
      <string>Выбор уровня</string>
     </property>
@@ -101,7 +120,7 @@
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>29</y>
+      <y>90</y>
       <width>631</width>
       <height>261</height>
      </rect>
@@ -116,27 +135,24 @@
    <widget class="QLabel" name="timertext">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>340</y>
-      <width>191</width>
-      <height>71</height>
+      <x>310</x>
+      <y>40</y>
+      <width>71</width>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:26px;
+color:#D12525;
+</string>
     </property>
     <property name="text">
      <string>00:00</string>
-    </property>
-   </widget>
-   <widget class="QLCDNumber" name="lcdNumber">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>340</y>
-      <width>211</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:#BA2727;</string>
     </property>
    </widget>
    <zorder>backside</zorder>
@@ -146,7 +162,6 @@
    <zorder>textEdit</zorder>
    <zorder>timertext</zorder>
    <zorder>lineEdit</zorder>
-   <zorder>lcdNumber</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QMenuBar" name="menubar">
@@ -161,7 +176,7 @@
   </widget>
  </widget>
  <resources>
-  <include location="resourse.qrc"/>
+  <include location="../resourse.qrc"/>
  </resources>
  <connections/>
 </ui>

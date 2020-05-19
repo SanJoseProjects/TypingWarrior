@@ -4,6 +4,9 @@
 #include <QMainWindow>
 #include "secondwindow.h"
 #include "thirdwindow.h"
+#include <QMessageBox>
+#include <QString>
+#include <QRegExpValidator>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow;

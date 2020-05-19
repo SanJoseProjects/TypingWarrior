@@ -71,7 +71,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="resourse.qrc">:/res/img/backside.jpg</pixmap>
+     <pixmap resource="../resourse.qrc">:/res/img/backside.jpg</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -128,6 +128,9 @@
          <pointsize>10</pointsize>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:#F0CA08;</string>
+       </property>
        <property name="text">
         <string>начать</string>
        </property>
@@ -138,7 +141,7 @@
   </widget>
  </widget>
  <resources>
-  <include location="resourse.qrc"/>
+  <include location="../resourse.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -1,6 +1,11 @@
 #ifndef THIRDWINDOW_H
 #define THIRDWINDOW_H
 #include <QMainWindow>
+#include <QTimer>
+#include <QTime>
+#include <QMessageBox>
+#include <QFile>
+#include <iostream>
 namespace Ui {
 class ThirdWindow;
 }
