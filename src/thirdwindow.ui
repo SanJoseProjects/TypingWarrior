@@ -17,7 +17,7 @@
    <widget class="QLabel" name="backside">
     <property name="geometry">
      <rect>
-      <x>-140</x>
+      <x>-130</x>
       <y>-30</y>
       <width>1028</width>
       <height>601</height>
@@ -116,16 +116,37 @@
    <widget class="QLabel" name="timertext">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>360</y>
-      <width>131</width>
-      <height>41</height>
+      <x>260</x>
+      <y>340</y>
+      <width>191</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>00:00</string>
     </property>
    </widget>
+   <widget class="QLCDNumber" name="lcdNumber">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>340</y>
+      <width>211</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#BA2727;</string>
+    </property>
+   </widget>
+   <zorder>backside</zorder>
+   <zorder>pushButton</zorder>
+   <zorder>pushButton_2</zorder>
+   <zorder>pushButton_3</zorder>
+   <zorder>textEdit</zorder>
+   <zorder>timertext</zorder>
+   <zorder>lineEdit</zorder>
+   <zorder>lcdNumber</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QMenuBar" name="menubar">

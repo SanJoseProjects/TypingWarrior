@@ -19,7 +19,7 @@ private slots:
     void on_pushButton_clicked();
 
 private:
-    Ui::SecondWindow *seconswindow;
+    Ui::SecondWindow *secondwindow;
     ThirdWindow *thirdwindow;
 };
 

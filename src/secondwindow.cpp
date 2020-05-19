@@ -3,21 +3,22 @@
 
 SecondWindow::SecondWindow(QWidget *parent) :
     QMainWindow(parent),
-    seconswindow(new Ui::SecondWindow)
+    secondwindow(new Ui::SecondWindow)
 {
-    seconswindow->setupUi(this);
+    secondwindow->setupUi(this);
 }
 
 SecondWindow::~SecondWindow()
 {
-    delete seconswindow;
+    delete secondwindow;
 }
+
 void SecondWindow::on_pushButton_clicked()
 {
     thirdwindow = new ThirdWindow(this);
     thirdwindow->setWindowTitle ("TypingWarrior");
     thirdwindow->show();
-    if(seconswindow->radioButton->isChecked()){
-
+    if(secondwindow->radioButton->isChecked()){
     }
 }
+

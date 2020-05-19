@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/res">
         <file>img/backside.jpg</file>
+        <file>levels/firstLevel.txt</file>
     </qresource>
 </RCC>
