@@ -1,6 +1,14 @@
 <RCC>
     <qresource prefix="/res">
         <file>img/backside.jpg</file>
-        <file>levels/firstLevel.txt</file>
+        <file>levels/letters/firstLevel.txt</file>
+        <file>levels/letters/secondLevel.txt</file>
+        <file>levels/letters/thirdLevel.txt</file>
+        <file>levels/sentences/firstLevel.txt</file>
+        <file>levels/sentences/secondLevel.txt</file>
+        <file>levels/sentences/thirdLevel.txt</file>
+        <file>levels/words/firstLevel.txt</file>
+        <file>levels/words/secondLevel.txt</file>
+        <file>levels/words/thirdLevel.txt</file>
     </qresource>
 </RCC>
