@@ -1,11 +1,10 @@
 #include "thirdwindow.h"
 #include "ui_thirdwindow.h"
-#include <QAbstractButton>
     QString login;
     QString level1 = "text.txt";
     QTime t(0,0,0);
     int a;
-    QTimer* timer = new QTimer();
+    bool pause;
     ThirdWindow::ThirdWindow(QWidget *parent) :
     QMainWindow(parent),
     thirdwindow(new Ui::ThirdWindow)
@@ -17,25 +16,33 @@ ThirdWindow::~ThirdWindow()
 {
     delete thirdwindow;
 }
+
 void ThirdWindow::on_pushButton_check_clicked()
 {
-    QString str = thirdwindow->textEdit->toPlainText();
+        QString str = thirdwindow->textEdit->toPlainText();
         QString text = thirdwindow->lineEdit->text();
+        int b = a;
+        pause = true;
+        int speed = text.length()/b*60;
+        QString timetext = "Затраченое время: " + QString::number(b) + " секунды\n" +"Cкрость набора: "
+                + QString::number(speed) + " с/м";
         if (text == str){
             QMessageBox::information(this,"Результат","Все правильно...");
         } else {
             QMessageBox::information(this,"Результат","Допущены ошибки...");
         }
-            QMessageBox::information(this,"Время",QString::number(a));
-        close();
-        timer->stop();
+            QMessageBox::information(this,"Время",timetext);
         thirdwindow->lineEdit->clear();
+        thirdwindow->pushButton_start->setEnabled(true);
+
 }
 
 void ThirdWindow::on_pushButton_start_clicked()
 {
     QString path;
     QString lvl1,lvl2,lvl3;
+    QTimer* timer = new QTimer(this);
+    t.setHMS(0,0,0);
     if (rand()%3+1 == 1){
         lvl1 = ":/res/levels/letters/firstLevel.txt";
     } else if (rand()%3+1 == 2){
@@ -58,15 +65,16 @@ void ThirdWindow::on_pushButton_start_clicked()
     }
     if (thirdwindow->radioButton_easy->isChecked()){
         path = lvl1 ;
+        timer->start(1000);
     }
     if (thirdwindow->radioButton_normal->isChecked()){
         path = lvl2;
+        timer->start(1000);
     }
     if (thirdwindow->radioButton_hard->isChecked()){
         path = lvl3 ;
+        timer->start(1000);
     }
-    QTimer* timer = new QTimer(this);
-    timer->start(1000);
     connect(timer, SIGNAL(timeout()), this, SLOT(onTimeout()));
     QFile level(path);
           if(!level.open(QFile::ReadOnly | QFile::Text)){
@@ -79,9 +87,11 @@ void ThirdWindow::on_pushButton_start_clicked()
         thirdwindow->textEdit->setText(buffer);
         thirdwindow->lineEdit->clear();
         thirdwindow->statusbar->showMessage(login);
-        if (thirdwindow->pushButton_check->isChecked()){
+        if (pause){
             timer->stop();
+            a = 0;
         }
+        thirdwindow->pushButton_start->setEnabled(false);
 }
 
 void ThirdWindow::on_pushButton_record_clicked()
@@ -92,8 +102,9 @@ void ThirdWindow::on_pushButton_record_clicked()
 
 void ThirdWindow::onTimeout()
 {
-    t = t.addSecs(1);
-    a += 1;
+    thirdwindow->pushButton_check->setCheckable(true);;
+        t = t.addSecs(1);
+        a += 1;
     QString time_show = t.toString("mm:ss");
     thirdwindow->timertext->setText(time_show);
 }

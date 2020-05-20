@@ -27,6 +27,8 @@ private slots:
 
     void okEnabled();
 
+    void on_pushButton_record_clicked();
+
 private:
     Ui::MainWindow *firstwindow;
     SecondWindow *secondwindow;

@@ -34,3 +34,10 @@ void MainWindow::on_pushButton_start_clicked()
     QString login = firstwindow->lineEdit->text();
     firstwindow->statusbar->showMessage(login);
 }
+
+void MainWindow::on_pushButton_record_clicked()
+{
+    secondwindow = new SecondWindow(this);
+    secondwindow->show();
+    thirdwindow->setWindowTitle("TypingWarrior");
+}

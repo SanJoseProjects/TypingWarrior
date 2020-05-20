@@ -99,23 +99,6 @@ border-radius:10;</string>
      <string>Начать </string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_record">
-    <property name="geometry">
-     <rect>
-      <x>251</x>
-      <y>450</y>
-      <width>229</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:#F0CA08;
-border-radius:10;</string>
-    </property>
-    <property name="text">
-     <string>Таблица рекордов</string>
-    </property>
-   </widget>
    <widget class="QTextEdit" name="textEdit">
     <property name="geometry">
      <rect>
@@ -230,7 +213,6 @@ border-radius:10;</string>
    <zorder>backside</zorder>
    <zorder>pushButton_check</zorder>
    <zorder>pushButton_start</zorder>
-   <zorder>pushButton_record</zorder>
    <zorder>textEdit</zorder>
    <zorder>timertext</zorder>
    <zorder>lineEdit</zorder>
