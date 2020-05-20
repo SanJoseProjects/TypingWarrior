@@ -19,11 +19,11 @@ public:
     ~ThirdWindow();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_pushButton_record_clicked();
 
-    void on_pushButton_2_clicked();
+    void on_pushButton_start_clicked();
 
-    void on_pushButton_3_clicked();
+    void on_pushButton_check_clicked();
 
     void onTimeout();
 
