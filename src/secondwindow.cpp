@@ -12,13 +12,3 @@ SecondWindow::~SecondWindow()
 {
     delete secondwindow;
 }
-
-void SecondWindow::on_pushButton_clicked()
-{
-    thirdwindow = new ThirdWindow(this);
-    thirdwindow->setWindowTitle ("TypingWarrior");
-    thirdwindow->show();
-    if(secondwindow->radioButton->isChecked()){
-    }
-}
-

@@ -60,6 +60,11 @@
       <height>41</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">border-radius:10;</string>
     </property>
@@ -111,15 +116,36 @@ border-radius:10;</string>
     <property name="font">
      <font>
       <family>Times New Roman</family>
-      <pointsize>14</pointsize>
+      <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="tabletTracking">
+     <bool>false</bool>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="tabChangesFocus">
+     <bool>true</bool>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="acceptRichText">
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QLabel" name="timertext">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>40</y>
+      <x>330</x>
+      <y>60</y>
       <width>71</width>
       <height>31</height>
      </rect>

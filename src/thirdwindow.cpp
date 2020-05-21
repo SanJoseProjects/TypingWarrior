@@ -19,22 +19,27 @@ ThirdWindow::~ThirdWindow()
 
 void ThirdWindow::on_pushButton_check_clicked()
 {
+        int mis = 0;
         QString str = thirdwindow->textEdit->toPlainText();
         QString text = thirdwindow->lineEdit->text();
+        for (int i = 0; i < str.length(); i++){
+            if (text[i] != str[i]){
+                mis = mis + 1;
+            }
+        }
         int b = a;
         pause = true;
         int speed = text.length()/b*60;
         QString timetext = "Затраченое время: " + QString::number(b) + " секунды\n" +"Cкрость набора: "
-                + QString::number(speed) + " с/м";
+                + QString::number(speed) + " с/м\n" + "Допущено ошибок: " + QString::number(mis) ;
         if (text == str){
-            QMessageBox::information(this,"Результат","Все правильно...");
+            QMessageBox::information(this,"Результат","Все правильно.");
         } else {
-            QMessageBox::information(this,"Результат","Допущены ошибки...");
+            QMessageBox::information(this,"Результат","Допущены ошибки или текст набран не полностью.");
         }
             QMessageBox::information(this,"Время",timetext);
         thirdwindow->lineEdit->clear();
         thirdwindow->pushButton_start->setEnabled(true);
-
 }
 
 void ThirdWindow::on_pushButton_start_clicked()

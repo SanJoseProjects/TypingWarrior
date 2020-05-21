@@ -77,67 +77,6 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>341</x>
-      <y>162</y>
-      <width>83</width>
-      <height>114</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QLabel" name="label">
-       <property name="font">
-        <font>
-         <family>Broadway</family>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Выбор уровня</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="radioButton">
-       <property name="text">
-        <string>1</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="radioButton_2">
-       <property name="text">
-        <string>2</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="radioButton_3">
-       <property name="text">
-        <string>3</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color:#F0CA08;</string>
-       </property>
-       <property name="text">
-        <string>начать</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
   </widget>
  </widget>
  <resources>

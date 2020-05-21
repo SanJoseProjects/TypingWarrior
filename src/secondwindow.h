@@ -2,7 +2,6 @@
 #define SECONDWINDOW_H
 
 #include <QMainWindow>
-#include "thirdwindow.h"
 namespace Ui {
 class SecondWindow;
 }
@@ -16,11 +15,9 @@ public:
     ~SecondWindow();
 
 private slots:
-    void on_pushButton_clicked();
 
 private:
     Ui::SecondWindow *secondwindow;
-    ThirdWindow *thirdwindow;
 };
 
 #endif // SECONDWINDOW_H

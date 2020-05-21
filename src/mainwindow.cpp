@@ -39,5 +39,5 @@ void MainWindow::on_pushButton_record_clicked()
 {
     secondwindow = new SecondWindow(this);
     secondwindow->show();
-    thirdwindow->setWindowTitle("TypingWarrior");
+    secondwindow->setWindowTitle("TypingWarrior");
 }
