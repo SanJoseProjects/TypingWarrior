@@ -7,6 +7,7 @@
 #include <QMessageBox>
 #include <QString>
 #include <QRegExpValidator>
+#include <QCloseEvent>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow;
@@ -28,6 +29,8 @@ private slots:
     void okEnabled();
 
     void on_pushButton_record_clicked();
+
+    void closeEvent(QCloseEvent *event);
 
 private:
     Ui::MainWindow *firstwindow;

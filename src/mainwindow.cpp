@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-    extern QString login;
 MainWindow::MainWindow(QWidget *parent):
       QMainWindow(parent),
       firstwindow(new Ui::MainWindow)
@@ -40,4 +39,15 @@ void MainWindow::on_pushButton_record_clicked()
     secondwindow = new SecondWindow(this);
     secondwindow->show();
     secondwindow->setWindowTitle("TypingWarrior");
+}
+void MainWindow::closeEvent(QCloseEvent *event)
+{
+    event->ignore();
+    if (QMessageBox::Yes == QMessageBox::question(this, "Закрыть?",
+                          "Уверены?",
+                          QMessageBox::Yes|QMessageBox::No))
+    {
+    event->accept();
+    }
+
 }
