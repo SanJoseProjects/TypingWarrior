@@ -6,6 +6,7 @@
 #include <QMessageBox>
 #include <QFile>
 #include <iostream>
+#include <QCloseEvent>
 namespace Ui {
 class ThirdWindow;
 }
@@ -26,6 +27,8 @@ private slots:
     void on_pushButton_check_clicked();
 
     void onTimeout();
+
+    void closeEvent(QCloseEvent *event);
 
 private:
     Ui::ThirdWindow *thirdwindow;
