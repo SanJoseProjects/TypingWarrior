@@ -1,9 +1,13 @@
 <RCC>
     <qresource prefix="/res">
         <file>img/backside.jpg</file>
-        <file>levels/letters/firstLevel.txt</file>
-        <file>levels/letters/secondLevel.txt</file>
-        <file>levels/letters/thirdLevel.txt</file>
+        <file>levels/letters/fjdk.txt</file>
+        <file>levels/letters/asl.txt</file>
+        <file>levels/letters/cvnb.txt</file>
+		<file>levels/letters/ghei.txt</file>
+		<file>levels/letters/qwop.txt</file>
+		<file>levels/letters/rtuy.txt</file>
+		<file>levels/letters/zxm.txt</file>
         <file>levels/sentences/firstLevel.txt</file>
         <file>levels/sentences/secondLevel.txt</file>
         <file>levels/sentences/thirdLevel.txt</file>

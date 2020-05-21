@@ -31,7 +31,7 @@ void ThirdWindow::on_pushButton_check_clicked()
         pause = true;
         int speed = text.length()/b*60;
         QString timetext = "Затраченое время: " + QString::number(b) + " секунды\n" +"Cкрость набора: "
-                + QString::number(speed) + " с/м\n" + "Допущено ошибок: " + QString::number(mis) ;
+                + QString::number(speed) + " с/м\n" + "Допущено ошибок: " + QString::number(mis);
         if (text == str){
             QMessageBox::information(this,"Результат","Все правильно.");
         } else {
@@ -48,26 +48,41 @@ void ThirdWindow::on_pushButton_start_clicked()
     QString lvl1,lvl2,lvl3;
     QTimer* timer = new QTimer(this);
     t.setHMS(0,0,0);
-    if (rand()%3+1 == 1){
-        lvl1 = ":/res/levels/letters/firstLevel.txt";
-    } else if (rand()%3+1 == 2){
-        lvl1 = ":/res/levels/letters/secondLevel.txt";
-    } else {
-        lvl1 = ":/res/levels/letters/thirdLevel.txt";
-    }
-    if (rand()%3+1 == 1){
-        lvl2 = ":/res/levels/words/firstLevel.txt";
-    } else if (rand()%3+1 == 2){
-        lvl2 = ":/res/levels/words/secondLevel.txt";
-    } else {
-        lvl2 = ":/res/levels/words/thirdLevel.txt";
-    }    if (rand()%3+1 == 1){
-        lvl3 = ":/res/levels/sentences/firstLevel.txt";
-    } else if (rand()%3+1 == 2){
-        lvl3 = ":/res/levels/sentences/secondLevel.txt";
-    } else {
-        lvl3 = ":/res/levels/sentences/thirdLevel.txt";
-    }
+    if (rand()%7+1 == 1){
+            lvl1 = ":/res/levels/letters/fjdk.txt";
+        } else if (rand()%7+1 == 2){
+            lvl1 = ":/res/levels/letters/rtuy.txt";
+        } else if (rand()%7+1 == 3){
+            lvl1 = ":/res/levels/letters/cvnb.txt";
+        } else if (rand()%7+1 == 4) {
+            lvl1 = ":/res/levels/letters/asl.txt";
+        } else if (rand()%7+1 == 5) {
+            lvl1 = ":/res/levels/letters/zxm.txt";
+        } else if (rand()%7+1 == 6) {
+            lvl1 = ":/res/levels/letters/ghei.txt";
+        } else {
+            lvl1 = ":/res/levels/letters/qwop.txt";
+        }
+
+        if (rand()%5+1 == 1){
+            lvl2 = ":/res/levels/words/firstLevel.txt";
+        } else if (rand()%5+1 == 2){
+            lvl2 = ":/res/levels/words/secondLevel.txt";
+        } else if (rand()%5+1 == 3) {
+            lvl2 = ":/res/levels/words/thirdLevel.txt";
+        } else if (rand()%5+1 == 4) {
+            lvl2 = ":/res/levels/words/fourthLevel.txt";
+        } else {
+            lvl2 = ":/res/levels/words/fifthLevel.txt";
+        }
+
+        if (rand()%3+1 == 1){
+            lvl3 = ":/res/levels/sentences/firstLevel.txt";
+        } else if (rand()%3+1 == 2){
+            lvl3 = ":/res/levels/sentences/secondLevel.txt";
+        } else {
+            lvl3 = ":/res/levels/sentences/thirdLevel.txt";
+        }
     if (thirdwindow->radioButton_easy->isChecked()){
         path = lvl1 ;
         timer->start(1000);
