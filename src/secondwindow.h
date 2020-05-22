@@ -15,7 +15,6 @@ class SecondWindow : public QMainWindow {
 public:
   explicit SecondWindow(QWidget *parent = nullptr);
   ~SecondWindow();
-public slots:
 
 private slots:
 

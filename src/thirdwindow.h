@@ -19,9 +19,9 @@ public:
   explicit ThirdWindow(QWidget *parent = nullptr);
   ~ThirdWindow();
 public slots:
-    int text_verification(QString str, QString text);
-    int speed_measurement(int time, QString text);
-    QString open_file(QString path);
+  int text_verification(QString str, QString text);
+  int speed_measurement(int time, QString text);
+  QString open_file(QString path);
 
 private slots:
 
@@ -32,7 +32,6 @@ private slots:
   void onTimeout();
 
   void closeEvent(QCloseEvent *event);
-
 
 private:
   Ui::ThirdWindow *thirdwindow;

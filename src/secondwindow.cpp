@@ -20,4 +20,3 @@ SecondWindow::SecondWindow(QWidget *parent)
 }
 
 SecondWindow::~SecondWindow() { delete secondwindow; }
-
