@@ -36,5 +36,6 @@ private:
     Ui::MainWindow *firstwindow;
     SecondWindow *secondwindow;
     ThirdWindow *thirdwindow;
+    QString login;
 };
 #endif // MAINWINDOW_H

@@ -1,16 +1,13 @@
 #include "thirdwindow.h"
 #include "ui_thirdwindow.h"
-    QString login;
-    QTimer* timer;
-    QString level1 = "text.txt";
-    QTime t(0,0,0);
-    int a;
     ThirdWindow::ThirdWindow(QWidget *parent) :
     QMainWindow(parent),
     thirdwindow(new Ui::ThirdWindow)
 {
     thirdwindow->setupUi(this);
     thirdwindow->textEdit->setReadOnly(true);
+    QRegExp exp("[a-zA-Z ]{600}");
+    thirdwindow->lineEdit->setValidator(new QRegExpValidator(exp, this));
     thirdwindow->pushButton_check->setEnabled(false);
 }
 ThirdWindow::~ThirdWindow()
@@ -21,40 +18,24 @@ ThirdWindow::~ThirdWindow()
 void ThirdWindow::on_pushButton_check_clicked()
 {
         disconnect(timer, SIGNAL(timeout()), this, SLOT(onTimeout()));
-        int mis = 0;
-        int dop = 0;
-        QString str = thirdwindow->textEdit->toPlainText();
-        QString text = thirdwindow->lineEdit->text();
-        if (str.length() != text.length()){
-            dop = text.length() - str.length();
-        }
-        for (int i = 0; i < str.length(); i++){
-            if (text[i] != str[i]){
-                mis = mis + 1;
-            }
-        }
-        mis += dop;
-        int b = a;
-        int speed = text.length()/b*60;
-        QString timetext = "Затраченое время: " + QString::number(a) + " секунды\n" +"Cкрость набора: "
+        thirdwindow->timertext->setText("00:00");
+        mis = text_verification(thirdwindow->textEdit->toPlainText(), thirdwindow->lineEdit->text());
+        speed = speed_measurement(ti, thirdwindow->lineEdit->text());
+        timetext = "Затраченое время: " + QString::number(ti) + " секунды\n" +"Cкрость набора: "
                 + QString::number(speed) + " с/м\n" + "Допущено ошибок: " + QString::number(mis);
-        if (text == str){
-            QMessageBox::information(this,"Результат","Все правильно.");
-        } else {
-            QMessageBox::information(this,"Результат","Допущены ошибки или текст набран не полностью.");
-        }
-            QMessageBox::information(this,"Время",timetext);
+        QMessageBox::information(this,"Время",timetext);
         thirdwindow->lineEdit->clear();
         thirdwindow->pushButton_start->setEnabled(true);
+        thirdwindow->pushButton_check->setEnabled(false);
+        thirdwindow->textEdit->setEnabled(true);
 }
 
 void ThirdWindow::on_pushButton_start_clicked()
 {
-    a = 0;
-    QString path;
-    QString lvl1,lvl2,lvl3;
-    timer = new QTimer(this);
+    ti = 0;
     t.setHMS(0,0,0);
+    thirdwindow->textEdit->setEnabled(false);
+    timer = new QTimer(this);
     if (rand()%7+1 == 1){
             lvl1 = ":/res/levels/letters/fjdk.txt";
         } else if (rand()%7+1 == 2){
@@ -102,19 +83,11 @@ void ThirdWindow::on_pushButton_start_clicked()
         path = lvl3 ;
         timer->start(1000);
     }
-    connect(timer, SIGNAL(timeout()), this, SLOT(onTimeout()));
-    QFile level(path);
-          if(!level.open(QFile::ReadOnly | QFile::Text)){
-             QMessageBox::information(this,"Error","Choose level");
-             return;
-        }
-        QString buffer = level.readAll();
-        level.close();
+        connect(timer, SIGNAL(timeout()), this, SLOT(onTimeout()));
+        thirdwindow->pushButton_start->setEnabled(false);
+        buffer = open_file(path);
         thirdwindow->textEdit->setText(buffer);
         thirdwindow->lineEdit->clear();
-        thirdwindow->statusbar->showMessage(login);
-        thirdwindow->pushButton_start->setEnabled(false);
-        thirdwindow->pushButton_check->setEnabled(true);
 }
 
 void ThirdWindow::on_pushButton_record_clicked()
@@ -127,8 +100,12 @@ void ThirdWindow::onTimeout()
 {
     thirdwindow->pushButton_check->setCheckable(true);;
         t = t.addSecs(1);
-        a += 1;
-    QString time_show = t.toString("mm:ss");
+        ti += 1;
+        if (ti == 1)
+        {
+            thirdwindow->pushButton_check->setEnabled(true);
+        }
+    time_show = t.toString("mm:ss");
     thirdwindow->timertext->setText(time_show);
 }
 void ThirdWindow::closeEvent(QCloseEvent *event)
@@ -142,4 +119,46 @@ void ThirdWindow::closeEvent(QCloseEvent *event)
     event->accept();
     }
 
+}
+
+int ThirdWindow::text_verification(QString str, QString text)
+{
+    mis = 0;
+    dop = 0;
+    for (i = 0; i < str.length(); i++){
+        if ((text[i] != str[i])&(i < text.length())){
+            mis = mis + 1;
+        }
+    }
+    if (text.length() == 0){
+        mis = str.length();
+    } else if (str.length() != text.length()) {
+        if (text.length() < str.length()){
+        dop = str.length() - text.length();
+        }
+        if (text.length() > str.length()){
+        dop = text.length() - str.length() ;
+        }
+    }
+    mis += dop;
+    return mis;
+}
+
+int ThirdWindow::speed_measurement(int time, QString text)
+{
+    speed = 60 * text.length()/time;
+    return speed;
+}
+
+QString ThirdWindow::open_file(QString path)
+{
+    QFile level(path);
+        if(!level.open(QFile::ReadOnly | QFile::Text)){
+             QMessageBox::information(this,"Error","Choose level");
+             thirdwindow->pushButton_start->setEnabled(true);
+        } else {
+        buffer = level.readAll();
+        level.close();
+        }
+        return buffer;
 }

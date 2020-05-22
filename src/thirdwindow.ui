@@ -10,6 +10,18 @@
     <height>540</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>720</width>
+    <height>540</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>720</width>
+    <height>540</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
@@ -54,7 +66,7 @@
    <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>45</x>
       <y>360</y>
       <width>631</width>
       <height>41</height>
@@ -72,7 +84,7 @@
    <widget class="QPushButton" name="pushButton_check">
     <property name="geometry">
      <rect>
-      <x>480</x>
+      <x>475</x>
       <y>410</y>
       <width>201</width>
       <height>31</height>
@@ -90,7 +102,7 @@ border-radius:10;</string>
    <widget class="QPushButton" name="pushButton_start">
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>45</x>
       <y>410</y>
       <width>201</width>
       <height>31</height>
@@ -105,9 +117,12 @@ border-radius:10;</string>
     </property>
    </widget>
    <widget class="QTextEdit" name="textEdit">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>45</x>
       <y>90</y>
       <width>631</width>
       <height>261</height>
@@ -117,6 +132,8 @@ border-radius:10;</string>
      <font>
       <family>Times New Roman</family>
       <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="mouseTracking">
@@ -131,6 +148,9 @@ border-radius:10;</string>
     <property name="autoFillBackground">
      <bool>true</bool>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color:#000045;</string>
+    </property>
     <property name="tabChangesFocus">
      <bool>true</bool>
     </property>
@@ -144,10 +164,10 @@ border-radius:10;</string>
    <widget class="QLabel" name="timertext">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>60</y>
-      <width>71</width>
-      <height>31</height>
+      <x>310</x>
+      <y>39</y>
+      <width>101</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
@@ -156,7 +176,8 @@ border-radius:10;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">font-size:26px;
+     <string notr="true">background-color:#000000;
+font-size:40px;
 color:#D12525;
 </string>
     </property>
@@ -167,7 +188,7 @@ color:#D12525;
    <widget class="QRadioButton" name="radioButton_easy">
     <property name="geometry">
      <rect>
-      <x>261</x>
+      <x>251</x>
       <y>416</y>
       <width>61</width>
       <height>21</height>
@@ -191,9 +212,9 @@ border-radius:10;</string>
    <widget class="QRadioButton" name="radioButton_normal">
     <property name="geometry">
      <rect>
-      <x>326</x>
+      <x>316</x>
       <y>416</y>
-      <width>81</width>
+      <width>91</width>
       <height>21</height>
      </rect>
     </property>

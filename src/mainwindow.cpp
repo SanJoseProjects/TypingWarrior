@@ -30,7 +30,7 @@ void MainWindow::on_pushButton_start_clicked()
     thirdwindow = new ThirdWindow(this);
     thirdwindow->setWindowTitle ("TypingWarrior");
     thirdwindow->show();
-    QString login = firstwindow->lineEdit->text();
+    login = firstwindow->lineEdit->text();
     firstwindow->statusbar->showMessage(login);
 }
 
