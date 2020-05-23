@@ -1,46 +1,3 @@
-<<<<<<< HEAD
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE QtCreatorCodeStyle>
-<!-- Written by QtCreator 4.12.0, 2020-05-22T16:04:17. -->
-<qtcreator>
- <data>
-  <variable>CodeStyleData</variable>
-  <valuemap type="QVariantMap">
-   <value type="bool" key="AlignAssignments">false</value>
-   <value type="bool" key="AutoSpacesForTabs">false</value>
-   <value type="bool" key="BindStarToIdentifier">true</value>
-   <value type="bool" key="BindStarToLeftSpecifier">false</value>
-   <value type="bool" key="BindStarToRightSpecifier">false</value>
-   <value type="bool" key="BindStarToTypeName">false</value>
-   <value type="bool" key="ExtraPaddingForConditionsIfConfusingAlign">true</value>
-   <value type="bool" key="IndentAccessSpecifiers">false</value>
-   <value type="bool" key="IndentBlockBody">true</value>
-   <value type="bool" key="IndentBlockBraces">false</value>
-   <value type="bool" key="IndentBlocksRelativeToSwitchLabels">false</value>
-   <value type="bool" key="IndentClassBraces">false</value>
-   <value type="bool" key="IndentControlFlowRelativeToSwitchLabels">true</value>
-   <value type="bool" key="IndentDeclarationsRelativeToAccessSpecifiers">true</value>
-   <value type="bool" key="IndentEnumBraces">false</value>
-   <value type="bool" key="IndentFunctionBody">true</value>
-   <value type="bool" key="IndentFunctionBraces">false</value>
-   <value type="bool" key="IndentNamespaceBody">false</value>
-   <value type="bool" key="IndentNamespaceBraces">false</value>
-   <value type="int" key="IndentSize">4</value>
-   <value type="bool" key="IndentStatementsRelativeToSwitchLabels">true</value>
-   <value type="bool" key="IndentSwitchLabels">false</value>
-   <value type="int" key="PaddingMode">2</value>
-   <value type="bool" key="ShortGetterName">true</value>
-   <value type="bool" key="SpacesForTabs">true</value>
-   <value type="int" key="TabSize">4</value>
-  </valuemap>
- </data>
- <data>
-  <variable>DisplayName</variable>
-  <value type="QString">Qt</value>
- </data>
-</qtcreator>
-=======
----
 Language:        Cpp
 AccessModifierOffset: -4
 AlignAfterOpenBracket: AlwaysBreak
@@ -60,7 +17,7 @@ AlwaysBreakBeforeMultilineStrings: true
 AlwaysBreakTemplateDeclarations: true
 BinPackArguments: false
 BinPackParameters: false
-BraceWrapping:   
+BraceWrapping:
   AfterClass:      false
   AfterControlStatement: false
   AfterEnum:       false
@@ -125,5 +82,3 @@ Standard:        Cpp11
 TabWidth:        8
 UseTab:          Never
 ...
-
->>>>>>> dc869a20392498b2d6bdda1c665b0bd85f33c71e
