@@ -16,7 +16,6 @@
         <file>levels/words/thirdLevel.txt</file>
         <file>levels/words/fourthLevel.txt</file>
         <file>levels/words/fifthLevel.txt</file>
-        <file>levels/letters/Score.txt</file>
-        <file>levels/test/test.txt</file>
+        <file>src/database/Scoreboard.db</file>
     </qresource>
 </RCC>

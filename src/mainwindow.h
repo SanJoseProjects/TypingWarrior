@@ -16,26 +16,26 @@ class MainWindow;
 QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow {
-  Q_OBJECT
+    Q_OBJECT
 
 public:
-  MainWindow(QWidget *parent = nullptr);
-  ~MainWindow();
+    MainWindow(QWidget* parent = nullptr);
+    ~MainWindow();
 private slots:
-  void on_pushButton_exit_clicked();
+    void on_pushButton_exit_clicked();
 
-  void on_pushButton_start_clicked();
+    void on_pushButton_start_clicked();
 
-  void okEnabled();
+    void okEnabled();
 
-  void on_pushButton_record_clicked();
+    void on_pushButton_record_clicked();
 
-  void closeEvent(QCloseEvent *event);
+    void closeEvent(QCloseEvent* event);
 
 private:
-  Ui::MainWindow *firstwindow;
-  SecondWindow *secondwindow;
-  ThirdWindow *thirdwindow;
-  QString login;
+    Ui::MainWindow* firstwindow;
+    SecondWindow* secondwindow;
+    ThirdWindow* thirdwindow;
+    QString login;
 };
 #endif // MAINWINDOW_H
