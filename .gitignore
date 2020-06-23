@@ -1,5 +1,5 @@
 /Src.pro.user
 /Test.pro.user.2f239fd
 /Test/Test.pro.user
-./bin
-./build
+bin
+build
